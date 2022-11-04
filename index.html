@@ -16,7 +16,7 @@
         };
         window.buildPath = "Build/WebGLTest.wasm";
         window.gameInstance = null;
-        if (!/Build/WebGLTest.wasm/.test(buildPath)) {
+        if (!window.buildPath.test(buildPath)) {
             window.gameInstance = UnityLoader.instantiate("gameContainer", buildPath, {onProgress: UnityProgress});
         }
 
