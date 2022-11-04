@@ -75,6 +75,17 @@
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
 
+//<script type="text/javascript">
+    var resize = function() {
+      document.getElementById("unityContainer").style.width = innerWidth + "px";
+      document.getElementById("unityContainer").style.height = innerHeight + "px";
+    }
+
+    resize();
+
+    window.addEventListener("resize", resize);
+//</script>
+
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
 
@@ -95,17 +106,6 @@
 
       //  canvas.style.width = "960px";
       //  canvas.style.height = "600px";
-
-<script type="text/javascript">
-    var resize = function() {
-      document.getElementById("unityContainer").style.width = innerWidth + "px";
-      document.getElementById("unityContainer").style.height = innerHeight + "px";
-}
-
-resize();
-
-window.addEventListener("resize", resize);
-  </script>
       }
 
       loadingBar.style.display = "block";
